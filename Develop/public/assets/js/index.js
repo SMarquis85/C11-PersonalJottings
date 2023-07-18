@@ -73,10 +73,13 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
-  saveNote(newNote).then(() => {
+  saveNote(newNote)
+  .then(() => {
     getAndRenderNotes();
     renderActiveNote();
-  });
+  })
+  .catch((error) => console.error('Error saving note:', error));
+
 };
 
 // Delete the clicked note
@@ -91,10 +94,12 @@ const handleNoteDelete = (e) => {
     activeNote = {};
   }
 
-  deleteNote(noteId).then(() => {
+  deleteNote(noteId)
+  .then(() => {
     getAndRenderNotes();
     renderActiveNote();
-  });
+  })
+  .catch((error) => console.error('Error saving note:', error));
 };
 
 // Sets the activeNote and displays it
@@ -173,7 +178,7 @@ const renderNoteList = async (notes) => {
 };
 
 // Gets notes from the db and renders them to the sidebar
-const getAndRenderNotes = () => getNotes().then(renderNoteList);
+const getAndRenderNotes = () => getNotes().then(renderNoteList).catch((error) => console.error('Error fetching notes:', error));
 
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
