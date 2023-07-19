@@ -1,12 +1,15 @@
 const express = require('express');
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid'); // Import the uuidv4 function to generate unique IDs
-
+const { v4: uuidv4 } = require('uuid');
+const path = require('path'); // Add this line to import the 'path' module
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware for parsing JSON data
 app.use(express.json());
+
+// Serve static files from the 'Develop' folder
+app.use(express.static(path.join(__dirname, 'Develop')));
 
 // Initialize db.json with an empty array if it does not exist
 const dbFilePath = 'db.json';
@@ -62,7 +65,7 @@ app.get('/notes', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(path.join(__dirname, 'Develop', 'index.html'));
 });
 
 // Start the server
