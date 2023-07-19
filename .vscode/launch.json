@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Node.js App",
+        "program": "${workspaceFolder}/index2.js",
+        "runtimeExecutable": "node",
+        "restart": true,
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": ["<node_internals>/**"]
+      }
+    ]
+  }
