@@ -1,18 +1,19 @@
 const express = require('express');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
-const path = require('path'); // Add this line to import the 'path' module
+const path = require('path');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware for parsing JSON data
 app.use(express.json());
 
-// Serve static files from the 'Develop' folder
-app.use(express.static(path.join(__dirname, 'Develop')));
+// Serve static files from the 'Develop/public' folder
+app.use(express.static(path.join(__dirname, 'Develop', 'public')));
 
 // Initialize db.json with an empty array if it does not exist
-const dbFilePath = 'db.json';
+const dbFilePath = path.join(__dirname, 'Develop', 'db.json');
 if (!fs.existsSync(dbFilePath)) {
   fs.writeFileSync(dbFilePath, '[]', 'utf8', (err) => {
     if (err) {
@@ -70,5 +71,5 @@ app.get('*', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log('Server is running on http://localhost:${PORT}');
 });
