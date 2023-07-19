@@ -58,11 +58,11 @@ app.post('/api/notes', (req, res) => {
 
 // HTML routes
 app.get('/notes', (req, res) => {
-  res.sendFile(__dirname + '/notes.html');
+  res.sendFile(__dirname + '/public/notes.html');
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 // Start the server
