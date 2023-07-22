@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const {
     notes
-} = require('../../db/db.json');
+} = require('../../db/db');
 const {
     createNewNote,
     deleteNote
@@ -9,12 +9,8 @@ const {
 
 
 router.get('/notes', (req, res) => {
-    // within the route --> fs.readFile()
-    console.log("Hit /NOTES route");
     let saved = notes;
-    console.log("Dataset: ", saved);
-    console.log("TYpe: ", typeof saved);
-    res.json(JSON.parse(saved));
+    res.json(saved);
 })
 
 router.post('/notes', (req, res) => {
