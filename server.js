@@ -21,9 +21,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`API server now on port ${PORT}!`);
-});
-
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+  console.log(`Server started on port ${PORT}!`);
 });
