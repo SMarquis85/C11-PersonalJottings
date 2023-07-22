@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { notes } = require('../../db/db'); // Make sure to provide the correct path to the db file.
-const { createNewNote, deleteNote } = require('../../lib/noteFunctions'); // Require the noteFunctions module.
+const { createNewNote, deleteNote } = require('lib/noteFunctions.js'); // Require the noteFunctions module.
 
 router.get('/notes', (req, res) => {
   let saved = notes;
