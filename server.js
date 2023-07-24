@@ -6,20 +6,16 @@ const path = require('path');
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+    extended: true
+}));
 
+app.use(express.static('public'));
+app.use(express.json());
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-app.use(express.static('public'));
-
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something went wrong!');
-});
 
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}!`);
+    console.log(`API server now on port ${PORT}!`);
 });
