@@ -3,6 +3,7 @@ Challenge 11 - Boot Camp
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+
 ## Table of Contents
 
   1. [Description of Assignment](#description-of-assignment)
@@ -14,9 +15,11 @@ Challenge 11 - Boot Camp
   5. [Contact](#Contact)
   6. [Final Work Review](#final-work-review)
 
+
   ## Description of Assignment
 
   To create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file. The application’s front end has already been created. Starter code was cloned from this repository: https://github.com/coding-boot-camp/miniature-eureka  It is your job to build the back end, connect the two and then deploy the entire application to Heroku.
+
 
   ## About 
 
@@ -55,16 +58,19 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ![images/HEROKU5.png](images/HEROKU5.png)
 
+
 ## License
 
 License used for this project - MIT
   * For more information on license types, please reference this website
   for additional licensing information: [https: //choosealicense.com/](https://choosealicense.com/).
 
+
   ## Contact
 
   * GitHub Username: [SMarquis85](https://github.com/SMarquis85)
   * Email: sophienathalie_85@outlook.com
+
 
   ## Final Work Review
 
