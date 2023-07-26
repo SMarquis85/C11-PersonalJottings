@@ -21,6 +21,7 @@ body {
   color: #000000;
   width: 100%;
   border: none;
+  outline: none;
 }
 
 .note-textarea {
