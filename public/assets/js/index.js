@@ -1,4 +1,4 @@
-// public/assets/js/index.js
+// public/js/script.js
 let noteTitle;
 let noteText;
 let saveNoteBtn;
