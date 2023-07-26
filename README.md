@@ -71,7 +71,7 @@ License used for this project - MIT
 **"Always leave the code a little cleaner than when you found it."**  This action was applied to ALL JAVASCRIPT files. To create this assignment, I used Sebastian Springer's Node.js book, references we're found on Google, multiple websites including W3Schools, DEV, GitHub, Insomnia and Tutorialspoint. YouTube was helpful as well as all ZOOM recordings (of previous classes). Looks much cleaner, organised and easier to find what you are looking for. I also received the help of my second tutor, Erik Hoversten. He helped deployed the application to Heroku without any issues or errors.
 
 > **(CARL-VIRT-FSF-PT-04-2023, Challenge 11 / README.md 2023)**
-> **(NODE.js, Sebastian Springer; First edition (2022) pages 31-101, 655-682. )**
+> **(JavaScript Full Stack Developers, LAwrence Wilson; Audiobook (2023) 6hrs and 29mins. )**
 
 ## Application Link: Heroku
 https://mysterious-citadel-25361-70154c7c7fe8.herokuapp.com/ 
